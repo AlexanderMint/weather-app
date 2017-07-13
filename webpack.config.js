@@ -34,7 +34,6 @@ module.exports = {
       'redux',
       'redux-thunk',
       'react-redux',
-      'react-redux-spinner',
       'axios',
       'prop-types'
     ]
