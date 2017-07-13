@@ -7,19 +7,20 @@ import App from 'containers/App';
 const routes = {
   component: App,
   path: '/',
-  // indexRoute: {
-  //   onEnter: (nextState, replace) => replace('transactions')
-  // },
+  indexRoute: {
+    onEnter: (nextState, replace) => replace('home')
+  },
   childRoutes: [
-    // require('./transactions').default,
-    // {
-    //   path: '*',
-    //   indexRoute: {
-    //     onEnter() {
-    //       window.location.href = '/404';
-    //     }
-    //   }
-    // }
+    require('./home').default,
+    require('./search').default,
+    {
+      path: '*',
+      indexRoute: {
+        onEnter() {
+          window.location.href = '/404';
+        }
+      }
+    }
   ]
 };
 
