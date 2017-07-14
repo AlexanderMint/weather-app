@@ -3,12 +3,6 @@ import AppBar from 'material-ui/AppBar';
 import SearchBar from 'components/SearchBar';
 
 class App extends React.Component {
-  // let searchField;
-
-  handleClickSearchBtn = () => {
-    // this.props.router.push(`/search/${searchField.getValue()}`);
-  }
-
   render() {
     return (
       <div className="app-box">

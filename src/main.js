@@ -11,7 +11,6 @@ import 'styles/main.less';
 
 injectTapEventPlugin();
 
-
 // create store
 const store = configureStore();
 
