@@ -29,6 +29,7 @@ module.exports = {
       'react-dom',
       'react-tap-event-plugin',
       'material-ui',
+      'material-ui-search-bar',
       'react-router',
       'react-router-redux',
       'redux',
