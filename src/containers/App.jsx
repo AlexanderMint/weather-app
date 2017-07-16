@@ -1,8 +1,17 @@
 import React from 'react';
+import { bindActionCreators } from 'redux';
+import { connect } from 'react-redux';
+import { Spinner } from 'react-redux-spinner';
 import AppBar from 'material-ui/AppBar';
 import SearchBar from 'components/SearchBar';
 
+import { getCities } from 'redux/modules/cities';
+
 class App extends React.Component {
+  componentWillMount() {
+    this.props.actions.getCities();
+  }
+
   render() {
     return (
       <div className="app-box">
@@ -14,9 +23,18 @@ class App extends React.Component {
           router={this.props.router}
         />
         <div className="content-box">{this.props.children}</div>
+        <Spinner config={{ parent: '#main-box' }} />
       </div>
     );
   }
 }
 
-export default App;
+function mapDispatchToProps(dispatch) {
+  return {
+    actions: {
+      getCities: bindActionCreators(getCities, dispatch)
+    }
+  };
+}
+
+export default connect(null, mapDispatchToProps)(App);
