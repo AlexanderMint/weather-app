@@ -1,6 +1,7 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
+import CityWidget from 'components/CityWidget';
 
 class HomePage extends React.Component {
   componentDidUpdate() {
@@ -9,7 +10,9 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <div>1</div>
+      <div>
+        <CityWidget />
+      </div>
     );
   }
 }
