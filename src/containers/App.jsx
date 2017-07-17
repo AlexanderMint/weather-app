@@ -16,6 +16,7 @@ class App extends React.Component {
     return (
       <div className="app-box">
         <AppBar
+          className="header"
           title="Weather App"
           iconElementLeft={<span />}
         />
