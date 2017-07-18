@@ -1,11 +1,18 @@
 @import (inline) "./normalize.css";
+@import (inline) "./fonts.css";
 @import "./variables.less";
 
 /**
  * Main
  * */
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 body {
   font-family: @opensans;
+  background: #fff;
 }
 
 h1, h2, h3,
@@ -23,9 +30,24 @@ textarea {
   font-family: @opensans;
 }
 
+a {
+  text-decoration: none;
+}
+
+.meteocons {
+  color: inherit;
+  text-decoration: none;
+
+  &:before {
+  	content: attr(data-icon);
+  	font-family: 'MeteoconsRegular';
+  }
+}
+
  #main-box {
    position: relative;
  }
+
 
  /**
   * Spinner
@@ -67,14 +89,7 @@ textarea {
  * Content box
  * */
 .content-box {
+  max-width: @max-width-app;
   padding: 0 3%;
-}
-
-/**
- * Header
- * */
-.header {
-  h1 {
-    text-align: left;
-  }
+  margin: 0 auto;
 }

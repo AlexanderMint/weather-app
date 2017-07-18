@@ -1,3 +1,6 @@
+@max-width-app: 800px;
+
+
 /**
  * Mixins
  * */
@@ -11,4 +14,15 @@
 /**
  * Fonts
  * */
-@opensans: 'Open Sans', sans-serif;
+// @opensans: 'Open Sans', sans-serif;
+@opensans: 'Nunito', sans-serif;
+@meteocons: 'MeteoconsRegular';
+
+
+.clear-fix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
