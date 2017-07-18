@@ -2,7 +2,7 @@ import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Spinner } from 'react-redux-spinner';
-import AppBar from 'material-ui/AppBar';
+import Header from 'components/Header';
 import SearchBar from 'components/SearchBar';
 
 import { getCities } from 'redux/modules/cities';
@@ -15,11 +15,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="app-box">
-        <AppBar
-          className="header"
-          title="Weather App"
-          iconElementLeft={<span />}
-        />
+        <Header />
         <SearchBar
           router={this.props.router}
         />

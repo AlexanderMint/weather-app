@@ -26,7 +26,7 @@ class SearchBar extends React.Component {
   render() {
     const searchFieldStyle = {
       margin: '0 auto',
-      maxWidth: 800
+      maxWidth: 600
     };
 
     return (

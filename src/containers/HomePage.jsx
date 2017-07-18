@@ -1,32 +1,41 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import CityWidget from 'components/CityWidget';
+import CityCard from 'components/CityCard';
+// import { initialData } from 'config';
+
+import { getCurrentWeather } from 'redux/modules/weather';
 
 class HomePage extends React.Component {
-  componentDidUpdate() {
-
+  componentWillMount() {
+    // this.props.actions.getCurrentWeather(initialData.defaultCityID);
   }
 
   render() {
+    const { currentWeather } = this.props;
+
     return (
       <div>
-        <CityWidget />
+        <CityCard
+          currentWeather={currentWeather}
+        />
       </div>
     );
   }
 }
 
 function mapStateToProps(state) {
+  const { weather } = state;
+
   return {
-    state
+    currentWeather: weather.current
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     actions: {
-      hideModal: bindActionCreators(() => {}, dispatch)
+      getCurrentWeather: bindActionCreators(getCurrentWeather, dispatch)
     }
   };
 }

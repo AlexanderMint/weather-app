@@ -9,6 +9,6 @@ export const localData = {
 
 export const weatherAPI = {
   key: 'e8c783c0b10b1df07e1af092d72fef7e',
-  host: 'api.openweathermap.org/data/2.5/'
+  host: 'http://api.openweathermap.org/data/2.5/'
 };
 /* eslint-enable import/prefer-default-export */
