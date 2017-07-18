@@ -22,11 +22,11 @@ export function getCities(userID) {
         });
       })
       .catch((errors) => {
-        console.error(errors);
-
         dispatch({
           type: GET_CITIES_FAIL
         });
+
+        throw new Error(errors);
       });
   };
 }
