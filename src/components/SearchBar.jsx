@@ -24,16 +24,10 @@ class SearchBar extends React.Component {
   }
 
   render() {
-    const searchFieldStyle = {
-      margin: '0 auto',
-      maxWidth: 600
-    };
-
     return (
       <div className="search-bar">
         <SearchField
           hintText="Your city name"
-          style={searchFieldStyle}
           onRequestSearch={this.handleOnRequestSearch}
           onChange={this.handleOnChangeSearch}
         />
