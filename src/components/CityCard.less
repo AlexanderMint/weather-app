@@ -1,71 +1,93 @@
 @import "../styles/variables.less";
 
+@padding-box-vertical: 2em;
+@padding-box-horizontal: 1em;
+
 .city-card {
-  // width: 60%;
+  max-width: @max-width-app;
   margin: 0 auto;
 
-  .main-grid1{
+  &__box {
   	position:relative;
-    // max-width: 800px;
-    border: 3px solid rgba(243,243,243, 1);
-  	background:#fff;
-    margin: 0 auto;
+    padding: 2em 1em;
+    margin: 2em auto 0 auto;
     .clear-fix;
   }
-  .main-grid1-pos span{
-  	// background:url(../images/1.png) no-repeat 0px 0px;
-  	display:block;
-  	height:181px;
-  	width:200px;
-  	position:absolute;
-  	top:-32%;
-      left: -3%;
+
+  &__temperature {
+    font-size: 4em;
+    margin: 0;
+    text-align: center;
+
+    &-unit {
+      font-size: .5em;
+    }
   }
-  .main-grid1 h2{
-  	font-size: 4em;
-      // color: #FFD61C;
-      margin: 0;
-      text-align: center;
+
+  &__sky-icon {
+    position: absolute;
+    top: 1em;
+    left: 5%;
+
+    .meteocons {
+      font-size: 7.7em;
+    }
   }
-  .main-grid1 h2 span{
-  	font-size: .5em;
-      // color: #DBDADA;
+
+  &__city-name {
+    width: 74%;
+    font-size: 2em;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 auto .5em auto;
   }
-  .main-grid1 p{
-  	margin: 0;
-      // color: #D1D1D1;
-  	font-size:1.5em;
-  	text-align: center;
+
+  &__sky-state {
+    &--city-name {
+      font-size: .5em;
+      text-transform: lowercase;
+      opacity: .7;
+    }
   }
-  .main-grid1-grid-left{
-  	float:left;
+
+  &__date-time {
+    position: absolute;
+    top: 1.6em;
+    right: 3%;
+    font-size: 1em;
+    text-align: right;
   }
-  .main-grid1-grid-left p{
-  	font-size:1em;
-  	// color:#999;
-  	margin:0;
-  	text-align: left;
+
+  &__time {
+    span {
+      display: block;
+      font-size: 2.5em;
+    }
   }
-  .main-grid1-grid-left h3{
-  	// color:#999;
-  	font-size:1em;
-  	margin:0;
-  	text-align: left;
-  }
-  .main-grid1-grid-right{
-  	float:right;
-  }
-  .main-grid1-grid-right p{
-  	// color:#999;
-  	font-size:1em;
-  	margin:0;
-  	text-align: right;
-  }
-  .main-grid1-grid-right p span{
-  	display:block;
-  	font-size:2.5em;
-  }
-  .main-grid1-grids {
-      padding:0 2em 2em;
+
+  &__info {
+    font-size: .8em;
+    opacity: .7;
+    padding: 0 10%;
+
+    &-list {
+      float: left;
+      width: 45%;
+      margin: 1em 2.5% 0 2.5%;
+
+      dt,
+      dd {
+        margin:0;
+        padding:0;
+      }
+      dt {
+        float:left;
+        clear: left;
+        font-weight: 700;
+        padding-right:0.5em;
+      }
+    }
   }
 }
