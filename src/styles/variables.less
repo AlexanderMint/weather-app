@@ -5,10 +5,10 @@
  * Mixins
  * */
  .transition (@transition) {
-	-webkit-transition: @transition;
-	-moz-transition:    @transition;
-	-ms-transition:     @transition;
-	-o-transition:      @transition;
+	-webkit-transition: all @transition;
+	-moz-transition:    all @transition;
+	-ms-transition:     all @transition;
+	-o-transition:      all @transition;
 }
 
 /**
@@ -25,4 +25,10 @@
     display: table;
     clear: both;
   }
+}
+
+.elipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }

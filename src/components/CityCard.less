@@ -9,7 +9,7 @@
 
   &__box {
   	position:relative;
-    padding: 2em 1em 1em 1em;
+    padding: 2em 1em 0 1em;
     margin: 2em auto 0 auto;
     .clear-fix;
   }
@@ -99,7 +99,17 @@
   }
 
   &__action {
-    margin: 1em 0 0 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
+
+    .city-card__forecasts-btn {
+      width: 100%;
+      text-transform: uppercase;
+      font-size: .8em;
+      border: none;
+      padding: .2em 0;
+      background: rgba(0, 0, 0, 0.01);
+    }
   }
 
 // media
@@ -146,8 +156,17 @@
 }
 
 .forecast {
+  height: auto;
   font-size: .8em;
+  overflow: hidden;
   .clear-fix;
+  .transition(.3s);
+  margin-bottom: 2em;
+
+  &--collapsed {
+    height: 0;
+    margin-bottom: 0;
+  }
 
   &__day {
     display: block;
@@ -198,24 +217,11 @@
     }
 
     .forecast__date {
-      // float: left;
       font-weight: 700;
     }
 
     .forecast__sky-state {
-      // float: left;
-      // clear: both;
       font-size: 170%;
-      // padding: 0 4%;
-    }
-
-    .forecast__temperature,
-    .forecast__natural-phenomen {
-      // float: right;
-    }
-
-    .forecast__natural-phenomen {
-      // clear: both;
     }
   }
 }
