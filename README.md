@@ -1,6 +1,5 @@
 # Weather single page application
 
-####[Demo]()
 
 ### Installation (development)
 1. clone or download project
